@@ -21,11 +21,14 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: mobileBackgroundColor,
+        elevation: 0,
         title: Form(
           child: TextFormField(
+            style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
             controller: searchController,
-            decoration:
-                const InputDecoration(labelText: 'Search for a user...'),
+            decoration: const InputDecoration(
+                labelText: 'Search for a user...',
+                labelStyle: TextStyle(color: Color.fromRGBO(18, 18, 18, 1))),
             onFieldSubmitted: (String _) {
               setState(() {
                 isShowUsers = true;
@@ -70,6 +73,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         ),
                         title: Text(
                           (snapshot.data! as dynamic).docs[index]['username'],
+                          style: const TextStyle(
+                              color: Color.fromRGBO(18, 18, 18, 1)),
                         ),
                       ),
                     );

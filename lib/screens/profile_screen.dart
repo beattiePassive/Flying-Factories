@@ -76,6 +76,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               backgroundColor: mobileBackgroundColor,
               title: Text(
                 userData['username'],
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromRGBO(0, 0, 0, 1)),
               ),
               centerTitle: false,
             ),
@@ -88,7 +91,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Row(
                         children: [
                           CircleAvatar(
-                            backgroundColor: Colors.grey,
+                            backgroundColor: Color.fromARGB(255, 0, 0, 0),
                             backgroundImage: NetworkImage(
                               userData['photoUrl'],
                             ),
@@ -119,7 +122,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                             backgroundColor:
                                                 mobileBackgroundColor,
                                             textColor: primaryColor,
-                                            borderColor: Colors.grey,
+                                            borderColor: const Color.fromARGB(
+                                                255, 0, 0, 0),
                                             function: () async {
                                               await AuthMethods().signOut();
                                               Navigator.of(context)
@@ -136,7 +140,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                 text: 'Unfollow',
                                                 backgroundColor: Colors.white,
                                                 textColor: Colors.black,
-                                                borderColor: Colors.grey,
+                                                borderColor:
+                                                    const Color.fromARGB(
+                                                        255, 0, 0, 0),
                                                 function: () async {
                                                   await FireStoreMethods()
                                                       .followUser(
@@ -185,8 +191,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: Text(
                           userData['username'],
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromRGBO(0, 0, 0, 1)),
                         ),
                       ),
                       Container(
@@ -196,6 +202,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                         child: Text(
                           userData['bio'],
+                          style: TextStyle(color: Color.fromRGBO(0, 0, 0, 1)),
                         ),
                       ),
                     ],
@@ -251,6 +258,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Text(
           num.toString(),
           style: const TextStyle(
+            color: Color.fromRGBO(0, 0, 0, 1),
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
@@ -262,7 +270,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             style: const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w400,
-              color: Colors.grey,
+              color: Color.fromARGB(255, 0, 0, 0),
             ),
           ),
         ),

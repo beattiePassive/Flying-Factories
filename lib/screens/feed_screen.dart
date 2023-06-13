@@ -24,12 +24,15 @@ class _FeedScreenState extends State<FeedScreen> {
           ? null
           : AppBar(
               backgroundColor: mobileBackgroundColor,
+              //elevation: 0,
               centerTitle: false,
               title: RichText(
                   text: TextSpan(
                       text: 'Beattie Passive Flying Factories',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 25))),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 21,
+                          color: Color.fromRGBO(0, 0, 0, 1)))),
               actions: [
                 IconButton(
                   icon: const Icon(

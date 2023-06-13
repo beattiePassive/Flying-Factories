@@ -104,8 +104,8 @@ class _PostCardState extends State<PostCard> {
                         Text(
                           widget.snap['username'].toString(),
                           style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromRGBO(0, 0, 0, 1)),
                         ),
                       ],
                     ),
@@ -215,6 +215,7 @@ class _PostCardState extends State<PostCard> {
                         )
                       : const Icon(
                           Icons.favorite_border,
+                          color: Color.fromRGBO(0, 0, 0, 1),
                         ),
                   onPressed: () => FireStoreMethods().likePost(
                     widget.snap['postId'].toString(),
@@ -226,6 +227,7 @@ class _PostCardState extends State<PostCard> {
               IconButton(
                 icon: const Icon(
                   Icons.comment_outlined,
+                  color: Color.fromRGBO(0, 0, 0, 1),
                 ),
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
@@ -238,6 +240,7 @@ class _PostCardState extends State<PostCard> {
               IconButton(
                   icon: const Icon(
                     Icons.send,
+                    color: Color.fromRGBO(0, 0, 0, 1),
                   ),
                   onPressed: () {}),
               Expanded(

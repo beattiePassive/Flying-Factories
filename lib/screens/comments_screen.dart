@@ -53,6 +53,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
         backgroundColor: mobileBackgroundColor,
         title: const Text(
           'Comments',
+          style: TextStyle(color: Color.fromRGBO(18, 18, 18, 1)),
         ),
         centerTitle: false,
       ),
@@ -99,6 +100,8 @@ class _CommentsScreenState extends State<CommentsScreen> {
                     decoration: InputDecoration(
                       hintText: 'Comment as ${user.username}',
                       border: InputBorder.none,
+                      hintStyle:
+                          TextStyle(color: Color.fromRGBO(18, 18, 18, 1)),
                     ),
                   ),
                 ),
